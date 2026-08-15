@@ -11,7 +11,7 @@ body = Body()  # Empty instance
 # Load model later
 body.load(
     model="./objects/housing_with_groups/housing.obj",
-    scale=1,
+    scale=1.0,
     density=1200.0,
     groups_density="./objects/housing_with_groups/groups_density.json"
 )

@@ -14,7 +14,7 @@ objects_density = {
 
 body = Body(
     model="./objects/housing_with_objects/housing.obj",
-    scale=1.0,
+    scale=[1.0, 1.0, 1.0],
     density=1000.0, # Fallback default density
     objects_density=objects_density
 )
