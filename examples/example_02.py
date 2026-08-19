@@ -1,7 +1,7 @@
-# Used to import bodyprop from upper hierarchical level
+# Used to import bodyprop from ../src
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
 
 # Import bodyprop
 from bodyprop import Body
@@ -22,10 +22,14 @@ body = Body(
 # Compute list of objects/groups in the model
 list_objects = body.list_objects()
 list_groups = body.list_groups()
-print(f"{list_objects}")
 
 # Compute mass for wheel rim
 mass_lower_casing = body.compute_mass(object="lower_casing")
 mass_upper_cover = body.compute_mass(object="upper_cover")
 mass_total = body.compute_mass()
+
+# Print list of internal objects
+print("")
+print(f"List of internal objects: {list_objects}")
+print("")
 

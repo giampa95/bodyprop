@@ -1,7 +1,7 @@
-# Used to import bodyprop from upper hierarchical level
+# Used to import bodyprop from ../src
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
 
 # Import bodyprop
 from bodyprop import Body
@@ -24,4 +24,7 @@ list_groups = body.list_groups()
 mass =  body.compute_mass()
 
 # Print mass / Expected 4*1200 + 4*950 = 8600 [kg]
+print("")
 print(f"Mass in [kg]:   {mass:.6f}") 
+print("")
+
